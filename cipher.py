@@ -37,11 +37,8 @@ def enc(plaintext, long_key, short_key, block_bits = 48):
         sys.exit(-1)
 
     text = num2bits(plaintext, block_bits)
-    print(text)
     round_key = num2bits(long_key, block_bits)
-    # print(round_key)
     perm_key = num2bits(short_key, block_bits * 2 / 3)
-    # print(perm_key)
 
     state = [None] * block_bits # temp variable
 
@@ -132,7 +129,7 @@ def dec(cipherText, long_key, short_key, block_bits = 48):
     
 
 if __name__ == '__main__':
-    plaintext = 0x4C847555C35B
+    plaintext = 0x2575575c5068
     key = 0xC28895BA327B
     permkey = 0x69D2CDB6
 
